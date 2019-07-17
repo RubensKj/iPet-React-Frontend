@@ -1,0 +1,64 @@
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    border-bottom: 1px solid #dcdcdc;
+    box-shadow: rgba(0,0,0,.05) 0 2px 4px 0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    max-width: 970px !important;
+    margin: auto;
+    padding: 0 25px;
+}
+
+.header-container a svg {
+    color: #189647;
+}
+
+.header-container .actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header-container .actions a {
+    padding: 13px 20px;
+    background: #189647;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 5px;
+    margin-left: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.header-container .actions a:hover {
+    opacity: 0.9;
+}
+
+.header-container .actions button {
+    padding: 13px 20px;
+    background: #189647;
+    text-decoration: none;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin-left: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.header-container .actions button:hover {
+    opacity: 0.9;
+}

@@ -1,0 +1,137 @@
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    margin: 20px auto 0;
+}
+
+.main-container .list-petshop-container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 20px auto 20px;
+    padding: 0 20px;
+    gap: 45px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(298px, 1fr));
+}
+
+.main-container .list-petshop-container a {
+    text-decoration: none;
+}
+
+.main-container .list-petshop-container article {
+    width: 100%;
+    height: 350px;
+    grid-template-columns: 85px 1px 1fr;
+    grid-column-gap: 20px;
+    box-sizing: border-box;
+    background: #fff;
+    border: 1px solid #eff1f9;
+    border-radius: 5px;
+    box-shadow: 4px 8px 20px 2px rgba(120,135,182,.2);
+    transition: all 0.2s;
+}
+
+.main-container .list-petshop-container article:hover {
+    transform: translateY(-2px);
+}
+
+.main-container .list-petshop-container article .image-petshop {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 250px;
+    border-bottom: 1px solid #eff1f9;
+}
+
+.main-container .list-petshop-container article .image-petshop img {
+    height: 250px;
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom: 1px solid #dcdcde;
+}
+
+.main-container .list-petshop-container article .box-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    position: relative;
+    border: 1px solid #dcdcde;
+    box-shadow: 4px 8px 20px 2px rgba(120,135,182,.1);
+    border-radius: 35px;
+    padding: 5px 25px;
+    margin: -30px 25px 0;
+}
+
+.main-container .list-petshop-container article .box-header .header-petshop {
+    display: block;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.main-container .list-petshop-container article .box-header .header-petshop h3 {
+    text-align: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 18px;
+    font-weight: bold;
+    color: #363636e3;
+}
+
+.main-container .list-petshop-container article .box-header .header-petshop p {
+    font-weight: 400;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 14px;
+    color: #495057;
+    opacity: 0.9;
+}
+
+.main-container .list-petshop-container article .base-information {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 30px 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.main-container .list-petshop-container article .base-information .rating-petshop {
+    margin: 0 10px 0 0;
+}
+
+.main-container .list-petshop-container article .base-information .status-petshop span, .main-container .list-petshop-container article .base-information .rating-petshop span {
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #717171;
+    opacity: 0.9;
+    display: block;
+}
+
+.main-container .list-petshop-container article .base-information .status-petshop p, .main-container .list-petshop-container article .base-information .rating-petshop p, .main-container .list-petshop-container article .base-information .rating-petshop svg {
+    font-size: 14px;
+    color: #adb5bd;
+    font-weight: 400;
+}
+
+.main-container .list-petshop-container article .base-information .rating-petshop .rating {
+    display: flex;
+}
+
+.main-container .list-petshop-container article .base-information .rating-petshop .rating svg {
+    margin-top: 1.8px;
+    color: #dabb72;
+}
+
+.main-container .list-petshop-container article .base-information .rating-petshop .rating p {
+    margin-left: 5px;
+}
+
+.main-container .list-petshop-container article .base-information .rating-petshop .rating p:hover {
+    color: #dabb72;
+}
