@@ -1,17 +1,30 @@
 const INITIAL_STATE = {
-    username: '',
-    password: '',
-    isAuthenticated: 0,
+    data: {
+        username: "",
+        password: "",
+        email: "",
+        firstName: "",
+        lastName: "",
+        cpf: "",
+        address: [
+            {
+                placeNumber: 0,
+                street: '',
+                complement: '',
+                neighborhood: '',
+                city: '',
+                cep: '',
+            }
+        ],
+        ddd: "",
+        phoneNumber: "",
+    },
 };
 
-export default function userAuth(state = INITIAL_STATE, action) {
+export default function user(state = INITIAL_STATE, action) {
     switch (action.type) {
-        case 'AUTHENTICATION':
-            return { ...state, isAuthenticated: action.bool }
-        case 'INFO-USERNAME':
-            return { ...state, username: action.text }
-        case 'INFO-PASSWORD':
-            return { ...state, password: action.text }
+        case 'SET_USER_INFORMATION':
+            return { ...state, data: action.user }
         default:
             return state;
     }

@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import api from '../../Services/api';
-
 import { useSelector, useDispatch } from 'react-redux';
 
 import Header from '../../Components/Header';
@@ -21,7 +20,7 @@ export default function Main() {
             await api.get('/companies').then(res => dispatch(addCompaniesAction(res.data)));
         };
         addCompanies();
-    }, []);
+    }, [dispatch]);
 
     return (
         <>
