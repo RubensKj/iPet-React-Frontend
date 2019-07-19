@@ -17,10 +17,11 @@ header {
     max-width: 970px !important;
     margin: auto;
     padding: 0 25px;
+    font-family: 'Poppins', sans-serif;
 }
 
 .header-container a svg {
-    color: #189647;
+    color: #7bbb5e;
 }
 
 .header-container .actions {
@@ -30,8 +31,8 @@ header {
 }
 
 .header-container .actions a {
-    padding: 13px 20px;
-    background: #189647;
+    padding: 11px 23px;
+    background: #7bbb5e;
     text-decoration: none;
     color: #fff;
     border-radius: 5px;
@@ -47,7 +48,7 @@ header {
 
 .header-container .actions button {
     padding: 13px 20px;
-    background: #189647;
+    background: #7bbb5e;
     text-decoration: none;
     color: #fff;
     border: none;

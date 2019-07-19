@@ -1,16 +1,18 @@
 import React from 'react';
+import { Provider } from 'react-redux';
 import Routes from './routes';
 
 import './styles.css';
-import Header from './Components/Header';
+import "./Components/styles/global";
 
+import store from './store';
 
 function App() {
   return (
     <div className="App">
-      {/* { (isAuthenticated() ? (<HeaderAuthenticated />) : (<Header />)) } */}
-      <Header />
-      <Routes />
+      <Provider store={store}>
+        <Routes />
+      </Provider>
     </div>
   );
 }

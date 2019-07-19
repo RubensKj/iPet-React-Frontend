@@ -1,27 +1,35 @@
-import React, { Component } from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import api from '../../Services/api';
 
+import { useSelector, useDispatch } from 'react-redux';
+
+import Header from '../../Components/Header';
 import './styles.css';
 
-export default class Main extends Component {
-    state = {
-        companies: [],
-    };
 
-    async componentDidMount() {
-        const response = await api.get("/companies");
-        this.setState({ companies: response.data});
-    };
+function addCompaniesAction(companies) {
+    return { type: 'LOAD_COMPANIES', companies }
+}
 
-    render() {
-        const state = this.state;
+export default function Main() {
+    const companies = useSelector(state => state.companies.data);
+    const dispatch = useDispatch();
 
-        return (
+    useEffect(() => {
+        const addCompanies = async () => {
+            await api.get('/companies').then(res => dispatch(addCompaniesAction(res.data)));
+        };
+        addCompanies();
+    }, []);
+
+    return (
+        <>
+            <Header />
             <div className="main-container">
                 <div className="list-petshop-container">
-                    {(state.companies.map(company => (
-                        <a key={company.id}  href={`/companies/` + company.id}>
+                    {(companies.map(company => (
+                        <Link key={company.id} to={`/companies/` + company.id}>
                             <article>
                                 <div className="image-petshop">
                                     <img srcSet={company.avatar} alt="logo" />
@@ -48,10 +56,10 @@ export default class Main extends Component {
                                     </div>
                                 </div>
                             </article>
-                        </a>
+                        </Link>
                     )))}
                 </div>
             </div>
-        );
-    }
+        </>
+    );
 }

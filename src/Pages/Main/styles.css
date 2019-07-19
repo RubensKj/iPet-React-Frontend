@@ -3,6 +3,8 @@
     justify-content: center;
     align-items: center;    
     margin: 20px auto 0;
+    animation: opacity;
+    animation-duration: 1s;
 }
 
 .main-container .list-petshop-container {
@@ -134,4 +136,15 @@
 
 .main-container .list-petshop-container article .base-information .rating-petshop .rating p:hover {
     color: #dabb72;
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 0;
+        transition: ease;
+    }
+    100% {
+        opacity: 1;
+        transition: ease;
+    }
 }

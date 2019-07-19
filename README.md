@@ -5,6 +5,7 @@ iPet App made by ReactJS
 ### Calendar
 
 Started on 15th of July 
+
 Sent to git on 17th of July
 
 ### `npm start`
